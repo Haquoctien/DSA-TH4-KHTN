@@ -19,10 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{3970329D-6B65-403C-90FE-43FF920F2D31}</ProjectGuid>
-    <RootNamespace>DSATH4KHTN</RootNamespace>
+    <ProjectGuid>{9D76854F-FE9D-48A6-9DC9-3B65823EDF81}</ProjectGuid>
+    <RootNamespace>bai2</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
-    <ProjectName>bai1</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -111,11 +110,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="SLL.h" />
+    <ClCompile Include="..\DSA-TH4-KHTN\SLL.cpp" />
+    <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SLL.cpp" />
-    <ClCompile Include="Source.cpp" />
+    <ClInclude Include="..\DSA-TH4-KHTN\SLL.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
