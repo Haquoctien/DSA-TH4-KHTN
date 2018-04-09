@@ -28,3 +28,4 @@ int numberOfNodes(intNodeList);
 intNode *nodeWithVal(intNodeList, unsigned);
 void sortList(intNodeList &);
 void swap(intNode *, intNode*);
+void addNodeSorted(intNodeList &, unsigned);

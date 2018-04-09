@@ -155,7 +155,7 @@ void deleteNodeWithVal(intNodeList &list, unsigned x)
 
 void sortList(intNodeList &list)
 {
-	for (intNode *p = list.head; p != NULL && p->next != NULL; p = p->next)
+	for (intNode *p = list.head; p != NULL; p = p->next)
 	{
 		intNode *minNode = p;
 		for (intNode *q = p->next; q != NULL; q = q->next)
@@ -175,3 +175,24 @@ void swap(intNode *a, intNode*b)
 	a->integer = b->integer;
 	b->integer = temp;
 }
+
+void addNodeSorted(intNodeList &list, unsigned x)
+{
+	sortList(list);
+	if (list.head == NULL) {
+		addHead(list, newNode(x));
+		return;
+	}
+	intNode *p = list.head, *beforeP = NULL;
+	while (p)
+	{
+		if (p->integer >= x)
+			break;
+		beforeP = p;
+		p = p->next;
+	}
+	intNode *node = newNode(x);
+	node->next = p;
+	beforeP->next = node;
+}
+
