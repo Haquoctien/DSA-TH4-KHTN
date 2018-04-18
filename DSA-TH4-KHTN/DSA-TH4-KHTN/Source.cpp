@@ -10,14 +10,24 @@ int main(int argc, char const *argv[])
 	intNode *tail = popTail(list);
 	cout << tail->integer << " popped" << endl;
 	listOutput(list);
-	cout << (nodeWithVal(list, 7)->integer) << endl;
-	cout << "list co do dai la: " << numberOfNodes(list) << endl;
+	cout << "Nhap x de tim x trong list: ";
+	int x;
+	cin >> x;
+	intNode* found = nodeWithVal(list, x);
+	if (!found)
+		cout << "Khong tim thay " << x << " trong list" << endl;
+	else
+		cout <<"Tim thay " << (found->integer) << endl;
+	cout << "List hien co do dai la: " << numberOfNodes(list) << endl;
 	sortList(list);
 	listOutput(list);
-	cout << "them node '5' vao sorted list" << endl;
-	addNodeSorted(list, 5);
+	cout << "Nhap so muon them vao sorted list: ";
+	cin >> x;
+	cout << "Them node "<< x <<" vao sorted list: ";
+	addNodeSorted(list, x);
 	listOutput(list);
-	deleteNodeWithVal(list, 5);
+	cout << "Xoa node vua them vao: ";
+	deleteNodeWithVal(list, x);
 	listOutput(list);
 	system("pause");
 	return 0;

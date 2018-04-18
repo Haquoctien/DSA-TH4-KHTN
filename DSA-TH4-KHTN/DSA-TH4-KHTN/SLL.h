@@ -33,7 +33,6 @@ intNodeList decimalToBinary(int);
 intNodeList decimalToHexadecimal(int);
 void hexadecimalOuput(intNodeList);
 
-#include "SLL.h"
 
 void intNodeListInit(intNodeList &list) {
 	list.head = list.tail = NULL;
